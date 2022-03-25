@@ -1,7 +1,11 @@
 # DyRep: Bootstrapping Training with Dynamic Re-parameterization 
-Official implementation for paper "DyRep: Bootstrapping Training with Dynamic Re-parameterization", CVPR 2022.
+Official implementation for paper "[DyRep: Bootstrapping Training with Dynamic Re-parameterization](https://arxiv.org/abs/2203.12868)", CVPR 2022.
 
 By Tao Huang, Shan You, Bohan Zhang, Yuxuan Du, Fei Wang, Chen Qian, Chang Xu.
+
+<p align='center'>
+<img src='./assests/DyRep_framework.png' alt='DyRep Framework' width='1000px'>
+</p>
 
 ## Updates  
 
@@ -68,4 +72,11 @@ The final weights of the inference model will be saved in `experiments/dyrep_ima
 ## Results  
 
 ## Citation  
-The paper will be released soon.
+```
+@article{huang2022dyrep,
+  title={DyRep: Bootstrapping Training with Dynamic Re-parameterization},
+  author={Huang, Tao and You, Shan and Zhang, Bohan and Du, Yuxuan and Wang, Fei and Qian, Chen and Xu, Chang},
+  journal={arXiv preprint arXiv:2203.12868},
+  year={2022}
+}
+```
