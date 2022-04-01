@@ -25,6 +25,12 @@ The core concept of DyRep is in `lib/models/utils/dyrep.py`.
 
 ## Reproducing our results  
 ### CIFAR  
+
+|Dataset|Model|Config|Paper|This repo|Log|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|CIFAR-10|VGG-16|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/cifar.yaml)|95.22%|95.37%|[log](https://github.com/hunto/DyRep/releases/download/v1.0.0/dyrep_cifar10_vgg16.txt)|
+|CIFAR-100|VGG-16|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/cifar.yaml)|74.37%|||
+
 * CIFAR-10
     ```
     sh tools/dist_train.sh 1 configs/strategies/DyRep/cifar.yaml nas_model --model-config configs/models/VGG/vgg16_cifar10.yaml --dyrep --experiment dyrep_cifar10_vgg16
@@ -68,8 +74,6 @@ sh tools/dist_convert.sh 8 configs/strategies/DyRep/resnet.yaml resnet50 --dyrep
 Then it will run test before and after deployment to ensure the accuracy will not drop.
 
 The final weights of the inference model will be saved in `experiments/dyrep_imagenet_res50/convert/model.ckpt`.
-
-## Results  
 
 ## Citation  
 ```
