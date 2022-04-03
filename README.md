@@ -18,10 +18,10 @@ The code is available at [image_classification_sota](https://github.com/hunto/im
 git clone https://github.com/hunto/image_classification_sota
 ```
 
-The prepare your environment and datasets following the `README.md` in `image_classification_sota`.
+The prepare your environment and datasets following the `README.md` in [image_classification_sota](https://github.com/hunto/image_classification_sota).
 
 ### Implementation of DyRep  
-The core concept of DyRep is in `lib/models/utils/dyrep.py`.
+The core concept of DyRep is in [lib/models/utils/dyrep.py](https://github.com/hunto/image_classification_sota/blob/main/lib/models/utils/dyrep.py).
 
 ## Reproducing our results  
 ### CIFAR  
@@ -29,7 +29,7 @@ The core concept of DyRep is in `lib/models/utils/dyrep.py`.
 |Dataset|Model|Config|Paper|This repo|Log|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |CIFAR-10|VGG-16|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/cifar.yaml)|95.22%|95.37%|[log](https://github.com/hunto/DyRep/releases/download/v1.0.0/dyrep_cifar10_vgg16.txt)|
-|CIFAR-100|VGG-16|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/cifar.yaml)|74.37%|||
+|CIFAR-100|VGG-16|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/cifar.yaml)|74.37%|74.60%|[log](https://github.com/hunto/DyRep/releases/download/v1.0.0/dyrep_cifar100_vgg16.txt)|
 
 * CIFAR-10
     ```
@@ -63,12 +63,12 @@ The core concept of DyRep is in `lib/models/utils/dyrep.py`.
 
 ## Deploying the Trained DyRep Models to Inference Models  
 ```
-sh tools/dist_convert.sh 8 ${CONFIG} ${MODEL} --resume ${CHECKPOINT}
+sh tools/dist_run.sh tools/convert.py ${GPUS} ${CONFIG} ${MODEL} --resume ${CHECKPOINT}
 ```
 
 For example, if you want to deploy the trained ResNet-50 model with the best checkpoint, run  
 ```
-sh tools/dist_convert.sh 8 configs/strategies/DyRep/resnet.yaml resnet50 --dyrep --resume experiments/dyrep_imagenet_res50/best.pth.tar
+sh tools/dist_run.sh tools/convert.py 8 configs/strategies/DyRep/resnet.yaml resnet50 --dyrep --resume experiments/dyrep_imagenet_res50/best.pth.tar
 ```
 
 Then it will run test before and after deployment to ensure the accuracy will not drop.
