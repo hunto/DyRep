@@ -41,6 +41,11 @@ The core concept of DyRep is in [lib/models/utils/dyrep.py](https://github.com/h
     ```
 
 ### ImageNet  
+
+|Dataset|Model|Config|Paper|This repo|Log|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|ImageNet|ResNet-18|[config](https://github.com/hunto/image_classification_sota/blob/main/configs/strategies/DyRep/resnet.yaml)|71.58%|71.66%|[log](https://github.com/hunto/DyRep/releases/download/v1.0.0/dyrep_imagenet_res18.txt)|
+
 * ResNets  
     ```
     sh tools/dist_train.sh 8 configs/strategies/DyRep/resnet.yaml resnet50 --dyrep --experiment dyrep_imagenet_res50
