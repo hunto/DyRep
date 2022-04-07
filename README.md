@@ -3,6 +3,8 @@ Official implementation for paper "[DyRep: Bootstrapping Training with Dynamic R
 
 By Tao Huang, Shan You, Bohan Zhang, Yuxuan Du, Fei Wang, Chen Qian, Chang Xu.
 
+:fire: **Training code is available [here](https://github.com/hunto/image_classification_sota).**
+
 <p align='center'>
 <img src='./assests/DyRep_framework.png' alt='DyRep Framework' width='1000px'>
 </p>
@@ -80,6 +82,9 @@ sh tools/dist_run.sh tools/convert.py 8 configs/strategies/DyRep/resnet.yaml res
 Then it will run test before and after deployment to ensure the accuracy will not drop.
 
 The final weights of the inference model will be saved in `experiments/dyrep_imagenet_res50/convert/model.ckpt`.
+
+## License  
+This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Citation  
 ```
