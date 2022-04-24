@@ -1,0 +1,3 @@
+[submodule "image_classification_sota"]
+	path = image_classification_sota
+	url = git@github.com:hunto/image_classification_sota.git
