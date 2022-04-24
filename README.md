@@ -17,10 +17,11 @@ The code is available at [image_classification_sota](https://github.com/hunto/im
 ## Getting started  
 ### Clone training code  
 ```
-git clone https://github.com/hunto/image_classification_sota
+git clone https://github.com/hunto/DyRep.git --recurse-submodules
+cd DyRep/image_classification_sota
 ```
 
-The prepare your environment and datasets following the `README.md` in [image_classification_sota](https://github.com/hunto/image_classification_sota).
+Then prepare your environment and datasets following the `README.md` in [image_classification_sota](https://github.com/hunto/image_classification_sota).
 
 ### Implementation of DyRep  
 The core concept of DyRep is in [lib/models/utils/dyrep.py](https://github.com/hunto/image_classification_sota/blob/main/lib/models/utils/dyrep.py).
