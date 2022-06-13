@@ -89,10 +89,12 @@ This project is released under the [Apache 2.0 license](LICENSE).
 
 ## Citation  
 ```
-@article{huang2022dyrep,
-  title={DyRep: Bootstrapping Training with Dynamic Re-parameterization},
-  author={Huang, Tao and You, Shan and Zhang, Bohan and Du, Yuxuan and Wang, Fei and Qian, Chen and Xu, Chang},
-  journal={arXiv preprint arXiv:2203.12868},
-  year={2022}
+@InProceedings{Huang_2022_CVPR,
+    author    = {Huang, Tao and You, Shan and Zhang, Bohan and Du, Yuxuan and Wang, Fei and Qian, Chen and Xu, Chang},
+    title     = {DyRep: Bootstrapping Training With Dynamic Re-Parameterization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {588-597}
 }
 ```
